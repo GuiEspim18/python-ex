@@ -22,8 +22,8 @@ def main(line, col):
     print("-"*33)
     sumLineRes = sumLine(3)
     sumColRes = columnSum(1)
-    pDiagonalSum  = diagonalSum(2)
-    sDiagonalSum  = diagonalSum(2)
+    pDiagonalSum  = diagonalSum(0)
+    sDiagonalSum  = diagonalSum(1)
     totalSumRes = totalSum()
     print("="*32)
     print(f"Soma da linha 4: {sumLineRes}")
@@ -54,6 +54,8 @@ def diagonalSum(diagonal):
         for i in range(0, len(nestedList), 1):
             d = (len(nestedList) - 1)- i
             total += nestedList[i][d]
+
+    return total
 
 def totalSum():
     total = 0
